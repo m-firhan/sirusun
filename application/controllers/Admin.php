@@ -22,7 +22,7 @@ class Admin extends CI_Controller {
   }
   public function kamar()
   {
-    $data['judul'] = 'Tabel Kamar' ;
+    $data['judul'] = 'Tabel Kamar Warga' ;
     $this->load->view('templates/header',$data);
     $this->load->view('templates/sidebar');
     $this->load->view('templates/topbar');
