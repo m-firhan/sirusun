@@ -4,7 +4,7 @@
       <div class="col-4 p-2">
         <div class="card text-white bg-info shadow-sm">
           <div class="card-body text-center">
-            <h5 class="card-title display-4 font-weight-bold"> 72</h5>
+            <h5 class="card-title display-4 font-weight-bold">2</h5>
             <h3 class="card-text font-weight-bold">WARGA</h3>
           </div>
         </div>
@@ -12,7 +12,7 @@
       <div class="col-4 p-2">
         <div class="card text-white bg-danger shadow-sm">
           <div class="card-body text-center">
-            <h5 class="card-title display-4 font-weight-bold">44</h5>
+            <h5 class="card-title display-4 font-weight-bold">2</h5>
             <h3 class="card-text font-weight-bold">KAMAR</h3>
           </div>
         </div>
