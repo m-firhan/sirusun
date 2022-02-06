@@ -2,6 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
+
+  public function __construct()
+  {
+      parent::__construct();
+      $this->load->database();
+      $this->load->model("user_model");
+      $this->load->library('form_validation');
+      $this->load->library('session');
+  }
+
   public function index()
   {
     $data['judul'] = 'Beranda' ;
@@ -28,5 +38,9 @@ class Admin extends CI_Controller {
     $this->load->view('templates/topbar');
     $this->load->view('admin/kamar');
     $this->load->view('templates/footer');
+  }
+  public function getWarga(){
+    $data["data"] = $this->user_model->getAll();
+    print(json_encode($data));
   }
 }
