@@ -1,7 +1,7 @@
 <div class="container">
   <div class="card shadow-sm">
     <div class="row p-4">
-      <div class="col-4 p-2">
+      <div class="col-12 col-lg-4 p-2">
         <div class="card text-white bg-info shadow-sm">
           <div class="card-body text-center">
             <h5 class="card-title display-4 font-weight-bold">2</h5>
@@ -9,7 +9,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4 p-2">
+      <div class="col-12 col-lg-4 p-2">
         <div class="card text-white bg-danger shadow-sm">
           <div class="card-body text-center">
             <h5 class="card-title display-4 font-weight-bold">2</h5>
@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4 p-2">
+      <div class="col-12 col-lg-4 p-2">
         <div class="card text-white bg-warning shadow-sm">
           <div class="card-body text-center">
             <h5 class="card-title display-4 font-weight-bold">3</h5>
@@ -25,7 +25,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4 p-2">
+      <div class="col-12 col-lg-4 p-2">
         <div class="card text-white bg-info shadow-sm">
           <div class="card-body text-center">
             <h5 class="card-title display-4 font-weight-bold">1</h5>
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4 p-2">
+      <div class="col-12 col-lg-4 p-2">
         <div class="card text-white bg-danger shadow-sm">
           <div class="card-body text-center">
             <h5 class="card-title display-4 font-weight-bold">28</h5>
@@ -41,7 +41,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4 p-2">
+      <div class="col-12 col-lg-4 p-2">
         <div class="card text-white bg-warning shadow-sm">
           <div class="card-body text-center">
             <h5 class="card-title display-4 font-weight-bold">7</h5>
@@ -58,7 +58,7 @@
         Informasi
       </div>
       <div class="row no-gutters">
-        <div class="col-md-1 pl-3 mt-3">
+        <div class="col-md-1 px-3 mt-3">
           <img src="<?= base_url('assets/img/default.jpg'); ?>" class="img-fluid img-thumbnail rounded-circle">
         </div>
           <div class="col-md-8">
