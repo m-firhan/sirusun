@@ -1,4 +1,10 @@
+<?php
 
+    if (isset($_POST['submit'])){
+        
+    }
+
+?>
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -89,42 +95,54 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="" method="POST">
+                        <form action="<?php echo site_url('kamar/tambah_kamar')?>" method="POST">
                             <div class="form-group">
                                     <label for="noRuangan">No Ruangan</label>
-                                    <input type="text" class="form-control" id="noRuangan" name="noRuangan">
+                                    <input type="text" class="form-control" id="noRuangan" name="no_ruangan" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="lantai">Lantai</label>
-                                    <input type="number" class="form-control" id="lantai" name="lantai">
+                                    <input type="number" class="form-control" id="lantai" name="lantai" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="fasilitas">fasilitas</label>
-                                    <input type="text" class="form-control" id="fasilitas" name="fasilitas">
+                                    <input type="text" class="form-control" id="fasilitas" name="fasilitas" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="harga">Harga</label>
-                                    <input type="number" class="form-control" id="harga" name="harga">
+                                    <input type="number" class="form-control" id="harga" name="harga" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="status">Status</label>
                                         <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <input class="form-check-input" type="radio" name="status" id="exampleRadios1" value="1" checked>
                                         <label class="form-check-label" for="exampleRadios1">
+                                            Kosong
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Terisi 1
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="3">
+                                        <label class="form-check-label" for="exampleRadios2">
                                             Penuh
                                         </label>
                                     </div>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                        <input class="form-check-input" type="radio" name="status" id="exampleRadios2" value="4">
                                         <label class="form-check-label" for="exampleRadios2">
-                                            Terisi 1
+                                            Dalam Perawatan
                                         </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                                <button type="button" class="btn btn-primary">Tambah</button>
+                                <button type="submit" class="btn btn-primary">Tambah</button>
                             </div>
                         </form>
                     </div>

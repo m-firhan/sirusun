@@ -75,7 +75,7 @@ class User_model extends CI_Model
             'user_type'         => 2,
             'registered_date'   => date('Y-m-d H:i:s'),
         );
-        
+    
         $this->db->set($data);
         if ($this->db->insert($this->_table, $this)){
             return $this->r->show(1,'Data berhasil ditambahkan');

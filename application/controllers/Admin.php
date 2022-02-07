@@ -37,6 +37,7 @@ class Admin extends CI_Controller {
     $this->load->view('admin/warga',$data);
     $this->load->view('templates/footer');
   }
+  
   public function kamar()
   {
     $this->load->model("kamar_model");

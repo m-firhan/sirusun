@@ -58,7 +58,7 @@
         Informasi
       </div>
       <?php
-        foreach ($infoData as $data) { ?>
+        foreach ($str_response as $data) { ?>
         <div>
           <div class="row no-gutters">
             <div class="col-md-1 pl-3 mt-3">

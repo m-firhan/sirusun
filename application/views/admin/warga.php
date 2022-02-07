@@ -1,4 +1,3 @@
-
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
@@ -62,25 +61,33 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form action="" method="POST">
+                        <form action="<?=base_url('user/tambah_warga');?>" method="POST">
+                            <div class="form-group">
+                                <label for="nama">No Pokok</label>
+                                <input name="no_pokok" type="text" class="form-control" id="nama" required>
+                            </div>
                             <div class="form-group">
                                 <label for="nama">Nama</label>
-                                <input type="text" class="form-control" id="nama">
+                                <input type="text" class="form-control" id="nama" name="nama" required>
                             </div>
                             <div class="form-group">
                                 <label for="alamat">Alamat</label>
-                                <input type="text" class="form-control" id="alamat">
+                                <input type="text" class="form-control" id="alamat" name="alamat" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tgl_lahir">Tanggal Lahir</label>
+                                <input type="date" class="form-control" id="alamat" name="tgl_lahir" required>
                             </div>
                             <div class="form-group">
                                 <label for="jenisKelamin">jenis kelamin</label>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                  <input class="form-check-input" type="radio" name="r_jk" id="exampleRadios1" value="laki-laki" checked>
                                     <label class="form-check-label" for="exampleRadios1">
                                         Laki-laki
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <input class="form-check-input" type="radio" name="r_jk" id="exampleRadios2" value="perempuan">
                                     <label class="form-check-label" for="exampleRadios2">
                                         Perempuan
                                     </label>
@@ -88,7 +95,11 @@
                             </div>
                             <div class="form-group">
                                 <label for="no_hp">Nomor HP</label>
-                                <input type="number" class="form-control" id="no_hp">
+                                <input type="number" class="form-control" name="no_hp" id="no_hp">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" name="email" id="email">
                             </div>
                         </div>
                             <div class="modal-footer">
@@ -115,11 +126,11 @@
                     <form action="" method="POST">
                             <div class="form-group">
                                 <label for="nama">Nama</label>
-                                <input type="text" class="form-control" id="nama" value="" name="nama">
+                                <input type="text" class="form-control" id="nama" value="" name="nama" required>
                             </div>
                             <div class="form-group">
                                 <label for="alamat">Alamat</label>
-                                <input type="text" class="form-control" id="alamat" value="" name="alamat">
+                                <input type="text" class="form-control" id="alamat" value="" name="alamat" required>
                             </div>
                             <div class="form-group">
                                 <label for="jenisKelamin">jenis kelamin</label>
@@ -143,7 +154,7 @@
                         </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                                <button type="button" class="btn btn-primary">Edit</button>
+                                <button type="submit" class="btn btn-primary">Edit</button>
                             </div>
                         </form>
                     </div>
