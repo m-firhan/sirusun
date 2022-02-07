@@ -89,12 +89,44 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                        <button type="button" class="btn btn-primary">Tambah</button>
-                    </div>
+                        <form action="" method="POST">
+                            <div class="form-group">
+                                    <label for="noRuangan">No Ruangan</label>
+                                    <input type="text" class="form-control" id="noRuangan" name="noRuangan">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lantai">Lantai</label>
+                                    <input type="number" class="form-control" id="lantai" name="lantai">
+                                </div>
+                                <div class="form-group">
+                                    <label for="fasilitas">fasilitas</label>
+                                    <input type="text" class="form-control" id="fasilitas" name="fasilitas">
+                                </div>
+                                <div class="form-group">
+                                    <label for="harga">Harga</label>
+                                    <input type="number" class="form-control" id="harga" name="harga">
+                                </div>
+                                <div class="form-group">
+                                    <label for="status">Status</label>
+                                        <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            Penuh
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            Terisi 1
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
+                                <button type="button" class="btn btn-primary">Tambah</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -111,12 +143,44 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                        <button type="button" class="btn btn-primary">Edit</button>
-                    </div>
+                        <form action="" method="POST">
+                            <div class="form-group">
+                                <label for="noRuangan">No Ruangan</label>
+                                    <input type="text" class="form-control" id="noRuangan" name="noRuangan" value="">
+                            </div>
+                                    <div class="form-group">
+                                        <label for="lantai">Lantai</label>
+                                        <input type="number" class="form-control" id="lantai" name="lantai" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="fasilitas">fasilitas</label>
+                                        <input type="text" class="form-control" id="fasilitas" name="fasilitas" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="harga">Harga</label>
+                                        <input type="number" class="form-control" id="harga" name="harga" value="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="status">Status</label>
+                                            <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Penuh
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                            <label class="form-check-label" for="exampleRadios2">
+                                                Terisi 1
+                                            </label>
+                                        </div>
+                                    </div>
+                                  </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

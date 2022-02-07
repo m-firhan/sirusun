@@ -32,7 +32,7 @@
                                             <td><?=$row->jk;?></td>
                                             <td><?=$row->no_hp;?></td>
                                             <td style="text-align: center;">
-                                                <a href="<?php echo site_url('warga/edit/'.$row->id_user); ?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+                                                <a href="<?php echo site_url('warga/edit/'.$row->id_user); ?>" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#editWarga"><i class="fa fa-edit"></i></a>
                                                 <a href="#" name="" onclick="deleteConfirm('<?php echo site_url('user/delete/'.$row->id_user); ?>')"  class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </a>
                                             </td>
                                         </tr>
@@ -62,15 +62,43 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                        <button type="button" class="btn btn-primary">Tambah</button>
-                    </div>
-                    </div>
+                        <form action="" method="POST">
+                            <div class="form-group">
+                                <label for="nama">Nama</label>
+                                <input type="text" class="form-control" id="nama">
+                            </div>
+                            <div class="form-group">
+                                <label for="alamat">Alamat</label>
+                                <input type="text" class="form-control" id="alamat">
+                            </div>
+                            <div class="form-group">
+                                <label for="jenisKelamin">jenis kelamin</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Laki-laki
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Perempuan
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="no_hp">Nomor HP</label>
+                                <input type="number" class="form-control" id="no_hp">
+                            </div>
+                        </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
+                                <button type="submit" class="btn btn-primary">Tambah</button>
+                            </div>
+                        </form>
                 </div>
             </div>
+        </div>
             <!-- akhir modal tambah -->
 
             <!-- modal edit -->
@@ -84,12 +112,40 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-                        <button type="button" class="btn btn-primary">Edit</button>
-                    </div>
+                    <form action="" method="POST">
+                            <div class="form-group">
+                                <label for="nama">Nama</label>
+                                <input type="text" class="form-control" id="nama" value="" name="nama">
+                            </div>
+                            <div class="form-group">
+                                <label for="alamat">Alamat</label>
+                                <input type="text" class="form-control" id="alamat" value="" name="alamat">
+                            </div>
+                            <div class="form-group">
+                                <label for="jenisKelamin">jenis kelamin</label>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Laki-laki
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Perempuan
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="no_hp">Nomor HP</label>
+                                <input type="number" class="form-control" id="no_hp" name="no_hp" value="">
+                            </div>
+                        </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
+                                <button type="button" class="btn btn-primary">Edit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
