@@ -67,15 +67,4 @@ class Admin extends CI_Controller {
     $this->load->view('admin/pesan');
     $this->load->view('templates/footer');
   }
-
-  public function fasilitasUmum()
-  {
-    $data['judul'] = 'Fasilitas Umum' ;
-
-    $this->load->view('templates/header',$data);
-    $this->load->view('templates/sidebar');
-    $this->load->view('templates/topbar');
-    $this->load->view('manajemen/fasilitasUmum');
-    $this->load->view('templates/footer');
-  }
 }
