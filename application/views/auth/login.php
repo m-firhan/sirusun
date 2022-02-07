@@ -25,7 +25,7 @@
                                         </div>
                                         <div class="form-group">
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        <a href="admin/" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a>
                                         <hr>

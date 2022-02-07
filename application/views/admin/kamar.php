@@ -13,28 +13,59 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>No.</th>
+                                            <th>No. Ruangan</th>
+                                            <th>Lantai</th>
+                                            <th>Fasilitas</th>
+                                            <th>Harga</th>
+                                            <th>Status</th>
                                             <th>Action</th>
                                           </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                            <td>
-                                              <a href="#" class="badge badge-success"data-toggle="modal" data-target="#editKamar">Edit</a>
-                                              <a href="#" class="badge badge-danger" onclick="return confirm('Yakin mau dihapus!')">Hapus</a>
-                                            </td>
-                                        </tr>
+                                    <?php
+                                        $nomor = 0;
+                                        foreach ($data as $row) {
+                                        ?>
+
+                                            <tr>
+                                                <td><?=++$nomor;?></td>
+                                                <td><?=$row->no_ruangan;?></td>
+                                                <td><?=$row->lantai;?></td>
+                                                <td><?=$row->fasilitas;?></td>
+                                                <td><?="Rp. ".$row->harga;?></td>
+                                                <td>
+                                                <span class="label <?php
+                                                                        if ($row->status == 1) {
+                                                                            $str_status = "Kosong"; 
+                                                                            echo "badge badge-success";
+                                                                        }
+                                                                        if ($row->status == 2) {
+                                                                            $str_status = "Terisi 1";
+                                                                            echo "badge badge-primary";
+                                                                        }
+                                                                        if ($row->status == 3) {
+                                                                            $str_status = "Penuh";
+                                                                            echo "badge badge-danger";
+                                                                        }
+                                                                        if ($row->status == 4){
+                                                                            $str_status = "Dalam Perbaikan";
+                                                                            echo "badge badge-warning";
+                                                                        } 
+                                                                        ?>"
+                                                                        ><?=$str_status?></span>
+                                                </td>
+                                                <td>
+                                                    <a href="#" class="badge badge-success"data-toggle="modal" data-target="#editKamar">Edit</a>
+                                                    <a href="#" class="badge badge-danger" onclick="return confirm('Yakin mau dihapus!')">Hapus</a>
+                                                <!-- <a href="<?php echo site_url('kamar/edit/').$row->id_kamar; ?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> </a>
+                                                <a href="#" name="" onclick="deleteConfirm('<?php echo site_url('kamar/delete/'.$row->id_kamar); ?>')" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </a> -->
+                                                </td>
+                                            </tr>
+
+                                        <?php
+                                        }
+                                    ?>
                                     </tbody>
                                 </table>
                             </div>

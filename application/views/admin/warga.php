@@ -13,24 +13,32 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
+                                            <th>No.</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
                                             <th>Jenis Kelamin</th>
-                                            <th>Umur</th>
+                                            <th>no_hp</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php
+                                        $nomer = 0;
+                                        foreach ($data as $row) {?>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>Edinburgh</td>
-                                            <td>Laki-laki</td>
-                                            <td>61</td>
-                                            <td>
-                                              <a href="#" class="badge badge-success"data-toggle="modal" data-target="#editWarga">Edit</a>
-                                              <a href="#" class="badge badge-danger" onclick="return confirm('Yakin mau dihapus!')">Hapus</a>
+                                            <td><?=++$nomer?></td>
+                                            <td><?=$row->nama;?></td>
+                                            <td><?=$row->alamat;?></td>
+                                            <td><?=$row->jk;?></td>
+                                            <td><?=$row->no_hp;?></td>
+                                            <td style="text-align: center;">
+                                                <a href="<?php echo site_url('warga/edit/'.$row->id_user); ?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i></a>
+                                                <a href="#" name="" onclick="deleteConfirm('<?php echo site_url('user/delete/'.$row->id_user); ?>')"  class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </a>
                                             </td>
                                         </tr>
+                                        <?php
+                                        }
+                                        ?>  
                                     </tbody>
                                 </table>
                             </div>
