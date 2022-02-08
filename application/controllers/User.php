@@ -111,6 +111,6 @@ class User extends CI_Controller {
 	public function delete($id = null){
 		$this->user_model->delete($id);
 
-		$this->index();
+		redirect(site_url('admin/warga'));
 	}
 }

@@ -13,23 +13,28 @@
                 <thead class="text-center">
                     <tr>
                         <th>No</th>
-                        <th>ID user</th>
-                        <th>tanggal pengiriman</th>
-                        <th>isi pesan</th>
+                        <th>ID User</th>
+                        <th>Tanggal Pengiriman</th>
+                        <th>Isi Pesan</th>
                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>mamang kali</td>
-                        <td>3 januari 2019</td>
-                        <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, molestiae!</td>
-                        <td style="text-align: center;">
-                            <a href="#" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#tambahPesan"><i class="fas fa-comment-dots"></i></a>
-                            <a href="#" class="btn btn-sm btn-danger" onclick="return confirm('yakin mau dihapus?')"><i class="fa fa-trash"></i> </a>
-                        </td>
-                    </tr>
+                    <?php 
+                        $nomer = 0;
+                        foreach ($data as $row) {?>
+                            <tr>
+                            <td><?=++$nomer;?></td>
+                            <td><?=$row->tgl;?></td>
+                            <td><?=$row->nama1;?></td>
+                            <td><?=$row->last_message;?></td>
+                            <td style="text-align: center;">
+                                <a href="<?php echo site_url('message/message_detail/1')?>" class="btn btn-sm btn-primary"><i class="fa fa-comments"></i> </a>
+                                <a name="" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </a>
+                            </td>
+                            </tr><?php
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>

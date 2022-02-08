@@ -62,8 +62,8 @@
                                                                         ><?=$str_status?></span>
                                                 </td>
                                                 <td>
-                                                    <a href="#" class="badge badge-success"data-toggle="modal" data-target="#editKamar">Edit</a>
-                                                    <a href="#" class="badge badge-danger" onclick="return confirm('Yakin mau dihapus!')">Hapus</a>
+                                                    <a href="#" class="btn btn-sm btn-success"data-toggle="modal" data-target="#editKamar"><i class="fa fa-edit"></i></a>
+                                                    <a href="#" class="btn btn-sm btn-danger" onclick="deleteConfirm('<?php echo site_url('kamar/delete/'.$row->id_kamar); ?>')"><i class="fa fa-trash"></i></a>
                                                 <!-- <a href="<?php echo site_url('kamar/edit/').$row->id_kamar; ?>" class="btn btn-sm btn-primary"><i class="fa fa-edit"></i> </a>
                                                 <a href="#" name="" onclick="deleteConfirm('<?php echo site_url('kamar/delete/'.$row->id_kamar); ?>')" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </a> -->
                                                 </td>

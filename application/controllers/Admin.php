@@ -61,10 +61,13 @@ class Admin extends CI_Controller {
   {
     $data['judul'] = 'Tabel Pesan' ;
 
+    $this->load->model("message_model");
+    $data["data"] = $this->message_model->getListMessageAll();
+
     $this->load->view('templates/header',$data);
     $this->load->view('templates/sidebar');
     $this->load->view('templates/topbar');
-    $this->load->view('admin/pesan');
+    $this->load->view('admin/pesan',$data);
     $this->load->view('templates/footer');
   }
 }

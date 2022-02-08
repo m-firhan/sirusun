@@ -13,10 +13,11 @@ class Kamar extends CI_Controller {
 
 	public function index()
 	{
-		$data["data"] = $this->kamar_model->getAll();
-		$this->load->view('hnf/header');
-		$this->load->view('kamar/daftar_kamar',$data);
-		$this->load->view('hnf/footer');
+		redirect(site_url('Admin/kamar'));
+		// $data["data"] = $this->kamar_model->getAll();
+		// $this->load->view('hnf/header');
+		// $this->load->view('kamar/daftar_kamar',$data);
+		// $this->load->view('hnf/footer');
 	}
 
 	public function tambah_kamar(){
@@ -32,7 +33,8 @@ class Kamar extends CI_Controller {
 			
 		}
 
-		redirect(site_url('Admin/kamar'));
+		$this->index();
+		//redirect(site_url('Admin/kamar'));
 	}
 
 	public function edit_kamar($id = null){
